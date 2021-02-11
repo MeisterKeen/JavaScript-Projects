@@ -29,6 +29,6 @@ window.alert("This is a pop-up! I vow to NEVER USE THESE if I can possibly avoid
 
 function turnRed() {
     var redred = "Red!";
-    var result = redred.fontcolor("red");
-    document.getElementById("redMe").innerHTML = result;
+    var redsult = redred.fontcolor("red");
+    document.getElementById("redMe").innerHTML = redsult;
   }
