@@ -25,3 +25,10 @@ window.alert("This is a pop-up! I vow to NEVER USE THESE if I can possibly avoid
 //Geocities days. Remember Geocities? Those were the days, man.
 //Anyway, pop-ups are a sin, no matter what they're for.
 //Screw your ads, my adblocker stays on, by Crom!
+
+
+function turnRed() {
+    var redred = "Red!";
+    var result = redred.fontcolor("red");
+    document.getElementById("redMe").innerHTML = result;
+  }
