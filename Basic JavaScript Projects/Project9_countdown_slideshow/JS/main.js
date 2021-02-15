@@ -31,18 +31,26 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-    var i;                  // Interesting -- grabbing by class name instead of ID
+    var i;
+    // This creates an array of slides -- I could add more slides to the HTML!
     var slides = document.getElementsByClassName("mySlides");
+    // Creates a matching array of "dots"
     var dots = document.getElementsByClassName("dot");
+    // Returns to first slide if you hit "next" at the last slide:
     if (n > slides.length) {slideIndex = 1}
+    // Goes to last slide if you hit "prev" at first slide (indexes to last item):
     if (n < 1) {slideIndex = slides.length}
+    // Changes which slide is displayed according to value of i:
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    // Changes which dot has the "active" appearance according to value of i:
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
+    // Active slide is now displayed (display mode is no longer "none"):
     slides[slideIndex-1].style.display = "block";
+    // Active dot now calls the "active" css class:
     dots[slideIndex-1].className += " active";
 }
 
@@ -63,3 +71,4 @@ function showSlides(n) {
 // IT KNOWS WHAT IT DID.
 
 // So anyway I guess I learned something.
+// Try sticking the <script> element in the header to see what I was seeing.
