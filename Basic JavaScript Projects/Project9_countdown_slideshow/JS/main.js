@@ -22,7 +22,7 @@ showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
-    showSlides(slideIndex +- n);
+    showSlides(slideIndex += n);
 }
 
 // Thumbnail image controls
@@ -44,12 +44,22 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    console.log(slides); //Sticking this in to try to debug something
-    console.log(dots); 
-} // This is working, except it is NOT displaying a slide until I click a dot.
+}
 
-// I have tried everything I can think of, including duplicating this entire project,
-// and copy-pasting the w3schools code whole cloth, and I can't figure out how to make
-// the damn thing display an image before manually clicking a dot. 
 
-// I have absolutely no solutions to this.
+// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+// FRUSTRATION ANGER DESPAIR WOE AND GRIEF
+// I RUE THE DAY I DECIDED TO BECOME A CODER
+
+// I could NOT get this BLASTED slideshow to display the first image on refresh.
+// I tried everything! I hunted for every possible typo --
+// And then I moved the <script> element from the head of the site, to the bottom
+// of the <body>. Because fuck it, MAYBE IT'LL WORK THAT WAY.
+
+// AND NOW IT WORKS
+// I HATE IT. I HATE THAT IT WASN'T WORKING
+// AND NOW I HATE THAT IT WORKS
+// LOOK AT IT. LOOK AT THE SMUG LOOK ON ITS FACE.
+// IT KNOWS WHAT IT DID.
+
+// So anyway I guess I learned something.
