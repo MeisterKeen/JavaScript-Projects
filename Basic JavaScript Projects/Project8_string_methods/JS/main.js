@@ -95,6 +95,6 @@ function primitivePi () {
     var primitivePi = pi.valueOf();
     console.log(primitivePi);
 }
-primitivePi() // This returns the full "primitive value of the number.
+primitivePi() // This returns the full "primitive" value of the number.
 // I wonder when or why this would be useful?
 
