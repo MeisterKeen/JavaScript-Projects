@@ -55,7 +55,7 @@ function showSlides(n) {
 }
 
 
-// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+// AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 // FRUSTRATION ANGER DESPAIR WOE AND GRIEF
 // I RUE THE DAY I DECIDED TO BECOME A CODER
 
@@ -72,3 +72,8 @@ function showSlides(n) {
 
 // So anyway I guess I learned something.
 // Try sticking the <script> element in the header to see what I was seeing.
+
+// ------------------------------------
+// Revisiting this a couple hours later:
+// Another solution is to use the "async" or "defer" argument
+// in the <script> element. Either of these also handles it.
