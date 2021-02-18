@@ -6,7 +6,7 @@ let selectedSquares = [];
 // This function is for placing an x or o in a square.
 function placeXOrO(squareNumber) {
     // This condition ensures a square hasn't been selected already.
-    // The .some() method is unsed to check each element of selectedSquare array
+    // The .some() method is used to check each element of selectedSquare array
     // to see if it contains the square number clicked on.
     if (!selectedSquares.some(element => element.includes(squareNumber))) {
         //This variable retrieves the html element id that was clicked.

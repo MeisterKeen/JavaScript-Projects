@@ -35,6 +35,7 @@ myFunction() // returns "true"
 
 var stuff = ["Blarg", "Uggo", "Stonk", "Moog"];
 
+// I don't actually understand this syntax.
 isBlarg = (blarg) => blarg == "Blarg";
 
 function someBlarg() {
@@ -42,3 +43,19 @@ function someBlarg() {
 	}
 
 someBlarg()
+
+// ------------ FURTHER NOTES ----------------- //
+
+// document.querySelector() method returns the first element within a file that
+// matches the selector specified. If no matches, returns null.
+// document.querySelectorAll() will return a group of elements.
+// EXAMPLE: 
+// document.querySelectorAll("p"); returns all paragraph elements in a document.
+
+// ParseFloat() parses a string and returns a floating point number.
+// Determines whether the first character in a string is a number. If it is,
+// it continues parsing until it reaches the end of the string. If the entire
+// string is really a number, it returns the number in the series as a number.
+// If the first character is not a number, it will return NaN.
+
+// In JS, "!" (bang) means NOT.
