@@ -1,0 +1,39 @@
+
+
+/* --------- FORM STYLES ---------- */
+
+input[type=text], select {
+    width: 80%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: steelBlue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: skyBlue;
+}
+
+.contact {
+    border-radius: 5px;
+    background-color: beige;
+    padding: 20px;
+    text-align: center;
+}
+
+/* ------- END OF FORM STYLES --------- */
+
