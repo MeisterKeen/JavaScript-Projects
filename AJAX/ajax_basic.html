@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Basic AJAX Demo</title>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="main">
+			<h2>Get The Latest Content:</h2>
+			<div class='content' id="content">
+				<input type="button" class="button" value="Get Content" id="btn_content" onclick="getContent();"/>
+			</div>
+		<script type="text/javascript">
+			
+            // NOTES:
+            // An XMLHttpRequest has five states:
+            // 0 : UNSENT : client has been created. open() not called yet.
+            // 1 : OPENED : open() has been called
+            // 2 : HEADERS_RECEIVED : send() has been called, and headers and status are available
+            // 3 : LOADING : Downloading; responseText holds partial data..
+            // 4 : DONE : The operation is complete
+
+            // STEP ONE: Set up xml http request object
+
+            var ajax = new XMLHttpRequest();
+
+            // STEP TWO: prepare the open ajax request
+
+            ajax.open('GET', 'content.html'); // We're now in state 1: open() has been called
+
+            // STEP THREE: define the ajax response callback method
+
+            ajax.onreadystatechange = function() { // This function will run anytime the readyState changes. It's an event listener!
+                if (ajax.readyState = 4) { // This waits for downloading to complete -- responseText will hold complete data at 4
+                    document.getElementById('content').innerHTML = ajax.responseText; // We push responseText to the html element.
+                    console.log("Ajax request has completed successfully") // I added this console line to confirm that this had run.
+                }
+            }
+
+//            ajax.onreadystatechange = function() { // For practice: this will listen for the readyState to hit state 2:
+//                if (ajax.readyState = 2) {
+//                    console.log("Ajax request has been sent")
+//                }
+//            } 
+                    // This^ function worked fine, but I commented it out because it prevented everything else from working!
+
+            // STEP FOUR: send the ajax request for data
+
+            function getContent() {
+                ajax.send(); // Now we've called send(), we're in state 2
+                document.getElementById('btn_content').style.display = 'none'; // hides the button element in the html doc
+            }
+
+            // So the XMLHttpRequest() function puts its response into a variable called responseText
+            // Once the request is complete (state 4), you can just put responseText where you want it!
+            // And that's Ajax, basically.
+
+		</script>
+    </body>
+</html>
