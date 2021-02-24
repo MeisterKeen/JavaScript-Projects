@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+        <meta charset="utf-8">
+
+        <title>Basic Template</title>
+        <meta name="description" content="A Basic HTML Template">
+        <meta name="author" content="Keen Little">
+        
+		<link rel="stylesheet" type="text/css" href="./css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+<script>
+
+$(document).ready(function() {
+    $("html").append( // This big 'ol string IS the html construction of the document
+        "<body>\
+            <div id='container'>\
+                <div id='inner'>\
+                    <h1>Basic jQuery</h1>\
+                    <p id='1'>Paragraph 1</p>\
+                    <p id='2'>Paragraph 2</p>\
+                    <p id='3'>Paragraph 3</p>\
+                </div>\
+            </div>\
+        </body>"
+    );
+        // So we have just asked jQuery to write the body of this site for us!
+
+        // Here are some tricky functions to mess with the styles of the elements:
+    $("#2").css({"color":"red" , "font-family":"impact"});
+    $("#3").click(function() {
+        $('h1').hide();
+    });
+    // Here's one I wrote:
+    $("#1").on({
+        "mouseover" : function() { $("#1").css({"font-family":"impact"}) },
+        "click" : function() { $("#1").hide("slow") }
+    });
+});
+
+</script>
+                 
+</html>
