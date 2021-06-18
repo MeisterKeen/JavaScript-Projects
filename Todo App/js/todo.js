@@ -58,7 +58,6 @@ document.getElementById('add').addEventListener('click', add);
 show();
 
 
-// Hell with it, I just stole the suggested code.
 function remove() {
     var id = this.getAttribute('id');
     var todos = get_todos();
@@ -68,7 +67,6 @@ function remove() {
 
     return false;
 }
-// Sorry, instructors -- I can't spend the time figuring this out
 
 
 // turns the footer text red on double-click -- does NOT work on mobile
